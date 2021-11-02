@@ -3,6 +3,46 @@ import Head from 'next/head';
 import Header from 'components/header';
 import Footer from 'components/footer';
 
+const speakers = [
+  {
+    name: 'krishan711.eth',
+    photoUrl: 'https://pbs.twimg.com/profile_images/1052545286105681920/fMiABHFs_400x400.jpg',
+    twitter: 'krishan711',
+    project: {
+      name: 'Million Dollar Token Page',
+      description: 'MDTP is the Homepage of the Metaverse! 🔮',
+      photoUrl: 'https://pbs.twimg.com/profile_images/1434926192872800257/rPQeiS8B_400x400.jpg',
+      twitter: 'mdtp_app',
+      url: 'https://milliondollartokenpage.com/',
+    },
+  },
+  {
+    name: 'fonzo',
+    photoUrl: 'https://pbs.twimg.com/profile_images/1432487627949854734/7VPV65wr_400x400.jpg',
+    twitter: 'AlfonzoMillions',
+    project: {
+      name: 'Stoned Bud Society NFT',
+      description:
+        'The Stoned Bud Society NFT collection is A collection of 9420 Stoned Bud Society members called Weedheadz.',
+      photoUrl: 'https://pbs.twimg.com/profile_images/1453173999291322368/BZVogxiy_400x400.jpg',
+      twitter: 'stonedbudNFT',
+      url: 'https://www.stonedbudsociety.com/',
+    },
+  },
+  {
+    name: 'Richard Melkonian',
+    photoUrl: 'https://pbs.twimg.com/profile_images/1323675167139237888/1IX4Gmri_400x400.jpg',
+    twitter: 'richardmelko',
+    project: {
+      name: 'INFLOW',
+      description: 'Where musicians launch their own Crypto and monetize WITH their community',
+      photoUrl: 'https://pbs.twimg.com/profile_images/1397016966334873603/wGWk4fZs_400x400.jpg',
+      twitter: 'INFLOW_music',
+      url: 'https://www.inflowmusic.io/',
+    },
+  },
+];
+
 export default function Home() {
   return (
     <div className="bg-bg text-white min-h-screen font-SpaceGrotesk">
@@ -36,26 +76,29 @@ export default function Home() {
             No shilling, no paper hands, <span className="font-bold">wgmi</span>
           </p>
         </div>
-        <div className="pt-6 flex flex-col gap-y-6">
+        <div className="pt-6 flex flex-col gap-y-12">
           <h2 className="text-center text-2xl font-bold">Speakers</h2>
-          <div>
-            <div className="flex flex-row gap-x-6">
-              <div className="bg-gray-400 h-28 w-28"></div>
-              <p>Some words here</p>
+          {speakers.map(speaker => (
+            <div key={speaker.name} className="flex flex-row gap-x-6">
+              <img className="h-28 w-28 rounded-lg" src={speaker.photoUrl} />
+              <img className="h-28 w-28 rounded-lg" src={speaker.project.photoUrl} />
+              <div>
+                <p className="font-bold text-lg">{speaker.name}</p>
+                <p>
+                  {speaker.project.name} -{' '}
+                  <a href={speaker.project.url} target="_blank" className="underline">
+                    {speaker.project.url}
+                  </a>
+                </p>
+                <p>{speaker.project.description}</p>
+                <div className="mt-2">
+                  <a href={`https://twitter.com/${speaker.twitter}`}>
+                    <img className="h-6" src="/twitter_logo.svg" />
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="flex flex-row gap-x-6">
-              <div className="bg-gray-400 h-28 w-28"></div>
-              <p>Some words here</p>
-            </div>
-          </div>
-          <div>
-            <div className="flex flex-row gap-x-6">
-              <div className="bg-gray-400 h-28 w-28"></div>
-              <p>Some words here</p>
-            </div>
-          </div>
+          ))}
         </div>
         {/* <div className="pt-6">
           <h2 className="text-center text-2xl font-bold">Reserve</h2>
