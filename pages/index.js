@@ -22,8 +22,7 @@ const speakers = [
     twitter: 'AlfonzoMillions',
     project: {
       name: 'Stoned Bud Society NFT',
-      description:
-        'The Stoned Bud Society NFT collection is A collection of 9420 Stoned Bud Society members called Weedheadz.',
+      description: 'A collection of 9420 Stoned Bud Society members called Weedheadz.',
       photoUrl: 'https://pbs.twimg.com/profile_images/1453173999291322368/BZVogxiy_400x400.jpg',
       twitter: 'stonedbudNFT',
       url: 'https://www.stonedbudsociety.com/',
@@ -79,9 +78,11 @@ export default function Home() {
         <div className="pt-6 flex flex-col gap-y-12">
           <h2 className="text-center text-2xl font-bold">Speakers</h2>
           {speakers.map(speaker => (
-            <div key={speaker.name} className="flex flex-row gap-x-6">
-              <img className="h-28 w-28 rounded-lg" src={speaker.photoUrl} />
-              <img className="h-28 w-28 rounded-lg" src={speaker.project.photoUrl} />
+            <div key={speaker.name} className="flex flex-col gap-y-6 lg:flex-row lg:gap-x-6">
+              <div className="flex flex-row gap-x-3 justify-center">
+                <img className="h-20 w-20 lg:h-28 lg:w-28 rounded-lg" src={speaker.photoUrl} />
+                <img className="h-20 w-20 lg:h-28 lg:w-28 rounded-lg" src={speaker.project.photoUrl} />
+              </div>
               <div>
                 <p className="font-bold text-lg">{speaker.name}</p>
                 <p>
