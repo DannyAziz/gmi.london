@@ -20,13 +20,21 @@ export default function Home() {
       <Header />
 
       <div className="flex flex-col gap-y-8 pt-12 pb-20 px-12">
-        <h1 className="text-center text-4xl font-bold">Indie London presents gmi.london a web3 event for builders</h1>
+        <h1 className="text-center text-4xl font-bold">Indie London presents</h1>
+        <h1 className="text-center text-4xl font-bold">gmi.london a web3 event for builders</h1>
         <button className="bg-secondary h-12 w-1/4 mx-auto rounded-md px-4">
           <span>I wanna to go to the event</span>
         </button>
-        <div className="pt-6">
+        <div className="pt-6 flex flex-col gap-y-6">
           <h2 className="text-center text-2xl font-bold">Event</h2>
-          <h1>Info about the community and the event itself</h1>
+          <p className="text-center text-xl">
+            A web3 event focused on <span className="font-bold">building</span>.
+          </p>
+          <p className="text-center text-xl font-bold">When?</p>
+          <p className="text-center text-xl">The 8th of December, 2021 - Location to be announced</p>
+          <p className="text-center text-xl">
+            No shilling, no paper hands, <span className="font-bold">wgmi</span>
+          </p>
         </div>
         <div className="pt-6 flex flex-col gap-y-6">
           <h2 className="text-center text-2xl font-bold">Speakers</h2>
