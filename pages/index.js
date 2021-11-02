@@ -22,7 +22,7 @@ export default function Home() {
       <div className="flex flex-col gap-y-8 pt-12 pb-20 px-12">
         <h1 className="text-center text-4xl font-bold">Indie London presents</h1>
         <h1 className="text-center text-4xl font-bold">gmi.london a web3 event for builders</h1>
-        <button className="bg-secondary h-12 w-1/4 mx-auto rounded-md px-4">
+        <button className="bg-secondary h-12 sm:w-1/4 mx-auto rounded-md px-4">
           <span>I wanna to go to the event</span>
         </button>
         <div className="pt-6 flex flex-col gap-y-6">
