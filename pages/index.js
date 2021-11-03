@@ -27,6 +27,12 @@ const speakers = [
       twitter: 'stonedbudNFT',
       url: 'https://www.stonedbudsociety.com/',
     },
+    project1: {
+      name: 'MemoCoinGen',
+      description: 'Launch your own crypto project → Raise millions → Help the needy → Drive Lambos.',
+      photoUrl: '',
+      url: 'https://www.memecoingen.com/',
+    },
   },
   {
     name: 'Richard Melkonian',
@@ -47,18 +53,18 @@ export default function Home() {
     <div className="bg-bg text-white min-h-screen font-SpaceGrotesk">
       <Head>
         <title>gmi.london</title>
-        <meta property="og:description" content="The web3 event for builders" />
+        <meta property="og:description" content="The Web3 event for builders" />
         <meta property="og:url" content="https://www.gmi.london" />
         <link rel="icon" href="/favicon.ico" />\
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={true} />
         <link
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
         <meta property="og:image" content="https://gmi.london/social.png" />
         <meta name="twitter:title" content="gmi.london" />
-        <meta name="twitter:description" content="The web3 event for builders" />
+        <meta name="twitter:description" content="The Web3 event for builders" />
         <meta name="twitter:image" content="https://gmi.london/social.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -67,7 +73,7 @@ export default function Home() {
 
       <div className="flex flex-col gap-y-8 pt-12 pb-28 px-12">
         <h1 className="text-center text-4xl font-bold">Indie London presents</h1>
-        <h1 className="text-center text-4xl font-bold">gmi.london a web3 event for builders</h1>
+        <h1 className="text-center text-4xl font-bold">gmi.london a Web3 event for builders</h1>
         <a
           href="https://www.meetup.com/Indie-London/events/281831350/"
           target="_blank"
@@ -77,12 +83,12 @@ export default function Home() {
         </a>
         <div className="mx-auto flex flex-col justify-center items-center text-center">
           <img src="bunny.gif" className="h-20 w-20" />
-          <p className="text-gray-400">Go down the rabbit hole of web3</p>
+          <p className="text-gray-400">Go down the rabbit hole of Web3</p>
         </div>
         <div className="pt-6 flex flex-col gap-y-6">
           <h2 className="text-center text-2xl font-bold">Event</h2>
           <p className="text-center text-xl">
-            A web3 event focused on <span className="font-bold">building</span>.
+            A Web3 event focused on <span className="font-bold">building</span>.
           </p>
           <p className="text-center text-xl font-bold">When?</p>
           <p className="text-center text-xl">The 8th of December, 2021 - Location to be announced</p>
@@ -107,6 +113,18 @@ export default function Home() {
                   </a>
                 </p>
                 <p>{speaker.project.description}</p>
+                {speaker.project1 && (
+                  <>
+                    <br />
+                    <p>
+                      {speaker.project1.name} -{' '}
+                      <a href={speaker.project1.url} target="_blank" className="underline">
+                        {speaker.project1.url}
+                      </a>
+                    </p>
+                    <p>{speaker.project1.description}</p>
+                  </>
+                )}
                 <div className="mt-2">
                   <a href={`https://twitter.com/${speaker.twitter}`} target="_blank">
                     <img className="h-6" src="/twitter_logo.svg" />

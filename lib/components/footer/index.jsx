@@ -15,7 +15,7 @@ const Footer = () => (
       target="_blank"
       className="sm:ml-auto"
     >
-      Join 900+ <span className="hidden sm:inline-block">IndieLdn</span> Members On Slack
+      Join 650+ <span className="hidden sm:inline-block">IndieLdn</span> Members On Slack
     </a>
   </footer>
 );
