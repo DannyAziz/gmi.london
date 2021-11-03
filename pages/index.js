@@ -72,7 +72,12 @@ export default function Home() {
       <Header />
 
       <div className="flex flex-col gap-y-8 pt-12 pb-28 px-12">
-        <h1 className="text-center text-4xl font-bold">Indie London presents</h1>
+        <h1 className="text-center text-4xl font-bold">
+          <a className="underline text-cta" href="https://www.indieldn.com/" target="_blank">
+            Indie London
+          </a>{' '}
+          presents
+        </h1>
         <h1 className="text-center text-4xl font-bold">gmi.london a Web3 event for builders</h1>
         <a
           href="https://www.meetup.com/Indie-London/events/281831350/"
