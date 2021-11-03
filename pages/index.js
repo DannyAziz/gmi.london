@@ -49,7 +49,7 @@ export default function Home() {
         <title>gmi.london</title>
         <link rel="icon" href="/favicon.ico" />\
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
@@ -58,12 +58,20 @@ export default function Home() {
 
       <Header />
 
-      <div className="flex flex-col gap-y-8 pt-12 pb-20 px-12">
+      <div className="flex flex-col gap-y-8 pt-12 pb-28 px-12">
         <h1 className="text-center text-4xl font-bold">Indie London presents</h1>
         <h1 className="text-center text-4xl font-bold">gmi.london a web3 event for builders</h1>
-        <button className="bg-secondary h-12 sm:w-1/4 mx-auto rounded-md px-4">
-          <span>I wanna to go to the event</span>
-        </button>
+        <a
+          href="https://www.meetup.com/Indie-London/events/281831350/"
+          target="_blank"
+          className="bg-secondary h-12 sm:w-1/4 mx-auto rounded-md px-4 flex justify-center items-center"
+        >
+          <span className="font-bold">I wanna to go to the event</span>
+        </a>
+        <div className="mx-auto flex flex-col justify-center items-center text-center">
+          <img src="bunny.gif" className="h-20 w-20" />
+          <p className="text-gray-400">Go down the rabbit hole of web3</p>
+        </div>
         <div className="pt-6 flex flex-col gap-y-6">
           <h2 className="text-center text-2xl font-bold">Event</h2>
           <p className="text-center text-xl">
@@ -75,7 +83,7 @@ export default function Home() {
             No shilling, no paper hands, <span className="font-bold">wgmi</span>
           </p>
         </div>
-        <div className="pt-6 flex flex-col gap-y-12">
+        <div className="pt-6 flex flex-col gap-y-12 mx-auto">
           <h2 className="text-center text-2xl font-bold">Speakers</h2>
           {speakers.map(speaker => (
             <div key={speaker.name} className="flex flex-col gap-y-6 lg:flex-row lg:gap-x-6">
@@ -93,7 +101,7 @@ export default function Home() {
                 </p>
                 <p>{speaker.project.description}</p>
                 <div className="mt-2">
-                  <a href={`https://twitter.com/${speaker.twitter}`}>
+                  <a href={`https://twitter.com/${speaker.twitter}`} target="_blank">
                     <img className="h-6" src="/twitter_logo.svg" />
                   </a>
                 </div>
