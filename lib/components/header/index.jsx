@@ -1,7 +1,7 @@
 const Header = () => (
   <div className="h-28 w-full flex flex-row items-center px-8 justify-between">
     <div className="flex flex-row gap-x-7">
-      <div className="bg-gray-400 h-16 w-16" />
+      <img className="bg-gray-400 h-16 w-16" src="/gmildnlogo.png" />
       <nav className="hidden sm:block">
         <ul className="flex flex-row gap-x-4 items-center h-full">
           <li>
