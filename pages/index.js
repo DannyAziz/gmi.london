@@ -47,6 +47,8 @@ export default function Home() {
     <div className="bg-bg text-white min-h-screen font-SpaceGrotesk">
       <Head>
         <title>gmi.london</title>
+        <meta property="og:description" content="The web3 event for builders" />
+        <meta property="og:url" content="https://www.gmi.london" />
         <link rel="icon" href="/favicon.ico" />\
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
@@ -54,7 +56,11 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        <meta property="og:image" content="https://gmi.london/social.png"></meta>
+        <meta property="og:image" content="https://gmi.london/social.png" />
+        <meta name="twitter:title" content="gmi.london" />
+        <meta name="twitter:description" content="The web3 event for builders" />
+        <meta name="twitter:image" content="https://gmi.london/social.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <Header />
