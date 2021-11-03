@@ -40,7 +40,8 @@ const speakers = [
     twitter: 'richardmelko',
     project: {
       name: 'INFLOW',
-      description: 'Where musicians launch their own Crypto and monetize WITH their community',
+      description:
+        'Where musicians launch their own Crypto and monetize WITH their community. Backed by Protocol Labs & Filecoin.',
       photoUrl: 'https://pbs.twimg.com/profile_images/1397016966334873603/wGWk4fZs_400x400.jpg',
       twitter: 'INFLOW_music',
       url: 'https://www.inflowmusic.io/',
