@@ -5,10 +5,6 @@ const Footer = () => (
       <a className="underline text-cta" href="https://www.indieldn.com/" target="_blank">
         indie.london
       </a>
-      <span>x</span>
-      <a className="underline text-secondary" href="https://www.dannyaziz.com" target="_blank">
-        Danny Aziz
-      </a>
     </div>
     <a
       href="https://docs.google.com/forms/d/e/1FAIpQLSfmZPkzlCRiBf6vn-HNf8UjbIWkmEORnKUkrseQ_-D06kBxWA/viewform"
