@@ -6,7 +6,7 @@ import Footer from 'components/footer';
 const speakers = [
   {
     name: 'krishan711.eth',
-    photoUrl: 'https://pbs.twimg.com/profile_images/1052545286105681920/fMiABHFs_400x400.jpg',
+    photoUrl: 'https://pbs.twimg.com/profile_images/1649797324762226688/VpIDPdJD_400x400.jpg',
     twitter: 'krishan711',
     project: {
       name: 'Million Dollar Token Page',
@@ -18,7 +18,7 @@ const speakers = [
   },
   {
     name: 'fonzo',
-    photoUrl: 'https://pbs.twimg.com/profile_images/1432487627949854734/7VPV65wr_400x400.jpg',
+    photoUrl: 'https://pbs.twimg.com/profile_images/1607182377717047297/sURMxboZ_400x400.jpg',
     twitter: 'AlfonzoMillions',
     project: {
       name: 'Stoned Bud Society NFT',
@@ -80,13 +80,6 @@ export default function Home() {
           presents
         </h1>
         <h1 className="text-center text-4xl font-bold">gmi.london a Web3 event for builders</h1>
-        <a
-          href="https://www.meetup.com/Indie-London/events/281831350/"
-          target="_blank"
-          className="bg-secondary h-12 sm:w-1/4 mx-auto rounded-md px-4 flex justify-center items-center"
-        >
-          <span className="font-bold">I wanna to go to the event</span>
-        </a>
         <div className="mx-auto flex flex-col justify-center items-center text-center">
           <img src="bunny.gif" className="h-20 w-20" />
           <p className="text-gray-400">Go down the rabbit hole of Web3</p>
@@ -96,19 +89,30 @@ export default function Home() {
           <p className="text-center text-xl">
             A Web3 event focused on <span className="font-bold">building</span>.
           </p>
+          <p className="text-center text-xl">
+            Three London guys in the web3 space are showing off their projects to the indieldn crowd, and{' '}
+            <a className="underline text-secondary" href="https://www.dannyaziz.com" target="_blank">
+              Danny Aziz
+            </a>{' '}
+            is gonna be the judge.
+          </p>
           <p className="text-center text-xl font-bold">When?</p>
-          <p className="text-center text-xl">The 8th of December, 2021 - Location to be announced</p>
+          <p className="text-center text-xl">
+            The 8th of December, 2021 -{' '}
+            <a className="underline" href="https://goo.gl/maps/2CkVbzRc4XmS7sDu7">
+              Here
+            </a>
+          </p>
           <p className="text-center text-xl">
             No shilling, no paper hands, <span className="font-bold">wgmi</span>
           </p>
         </div>
         <div className="pt-6 flex flex-col gap-y-12 mx-auto">
-          <h2 className="text-center text-2xl font-bold">Speakers</h2>
+          <h2 className="text-center text-2xl font-bold">Participants</h2>
           {speakers.map(speaker => (
             <div key={speaker.name} className="flex flex-col gap-y-6 lg:flex-row lg:gap-x-6">
               <div className="flex flex-row gap-x-3 justify-center">
                 <img className="h-20 w-20 lg:h-28 lg:w-28 rounded-lg" src={speaker.photoUrl} />
-                <img className="h-20 w-20 lg:h-28 lg:w-28 rounded-lg" src={speaker.project.photoUrl} />
               </div>
               <div>
                 <p className="font-bold text-lg">{speaker.name}</p>
@@ -140,14 +144,27 @@ export default function Home() {
             </div>
           ))}
         </div>
-        {/* <div className="pt-6">
-          <h2 className="text-center text-2xl font-bold">Reserve</h2>
-          <h1>Info about the community and the event itself</h1>
-        </div> */}
-        {/* <div className="pt-6">
-          <h2 className="text-center text-2xl font-bold">NFT</h2>
-          <h1 className="text-center text-4xl font-bold">Coming Soon...</h1>
-        </div> */}
+        <div className="pt-6 flex flex-col gap-y-12 mx-auto">
+          <h2 className="text-center text-2xl font-bold">Judge</h2>
+          <div className="flex flex-col gap-y-6 lg:flex-row lg:gap-x-6">
+            <div className="flex flex-row gap-x-3 justify-center">
+              <img
+                className="h-20 w-20 lg:h-28 lg:w-28 rounded-lg"
+                src={'https://pbs.twimg.com/profile_images/1638709745434468353/TENSKom5_400x400.jpg'}
+              />
+            </div>
+            <div>
+              <p className="font-bold text-lg">Danny Aziz</p>
+              <p>Given his successful collaboration with VeeFriends and the pioneering NFT app, wave</p>
+              <p> we're super pumped to have Danny Aziz as a judge for this event.</p>
+              <div className="mt-2">
+                <a href={`https://twitter.com/dannyaziz97`} target="_blank">
+                  <img className="h-6" src="/twitter_logo.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>
